@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Data.OleDb;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class RegisterParticipant : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        string plan = Request.Params["Plan"];
+        int theNum = Int32.Parse(plan);
+        Label2.Text = "";
+        if (plan != null)
+        {
+
+            OleDbConnection connect =
+            new OleDbConnection("Data Source=healthcare.c3o1ew6brwv6.us-east-1.rds.amazonaws.com; Initial Catalog=HealthCare; Provider=SQLOLEDB; User ID = Cloud; Password = CloudS19!");
+            connect.Open();
+            OleDbCommand comm = new OleDbCommand("select * from InsurancePlans where ID=" + theNum, connect);
+            OleDbDataReader reader = comm.ExecuteReader();
+            reader.Read();
+            Label1.Text = reader[1].ToString();
+
+        }
+
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        if (!TextBox1.Text.Contains("'"))
+        {
+            OleDbConnection connect =
+            new OleDbConnection("Data Source=healthcare.c3o1ew6brwv6.us-east-1.rds.amazonaws.com;  Initial Catalog = HealthCare; Provider = SQLOLEDB; User ID = Cloud; Password = CloudS19!");
+            connect.Open();
+            OleDbCommand comm = new OleDbCommand();
+            comm.CommandType = System.Data.CommandType.Text;
+            comm.CommandText = "INSERT INTO Registrations ([Full Name], [Insurance Plan], [Registration Date/Time]) VALUES(?,?,?)";
+            /* Parameters protect against SQL Injection */
+            comm.Parameters.AddWithValue("@Name", TextBox1.Text);
+            comm.Parameters.AddWithValue("@Plan", Request.Params["Plan"]);
+            comm.Parameters.AddWithValue("@Date", System.DateTime.Now);
+            comm.Connection = connect;
+            comm.ExecuteNonQuery();
+            Label2.Text = "Welcome to healthcare, " + TextBox1.Text;
+            connect.Close();
+        }
+    }
+}

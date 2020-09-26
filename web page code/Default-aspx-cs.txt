@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Data.OleDb;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class _Default : Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        Label[] plan_nums = { Label1, Label8, Label15, Label22 };
+        Label[] plan_titles = { Label2, Label9, Label16, Label23 };
+        Label[] plan_companies = { Label3, Label10, Label17, Label24 };
+        Label[] plan_categories = { Label4, Label11, Label18, Label25 };
+        Label[] plan_premiums = { Label5, Label12, Label19, Label26 };
+        Label[] plan_deductibles = { Label6, Label13, Label20, Label27 };
+        Label[] plan_out_of_pocket_maxs = { Label7, Label14, Label21, Label28 };
+        Button[] plan_selectors = { Button1, Button2, Button3, Button4 };
+
+        OleDbConnection connect =
+            new OleDbConnection("Data Source=healthcare.cg3hdx03u0u9g.us-east-1.rds.amazonaws.com; Initial Catalog=HealthCare; Provider=SQLOLEDB; User ID=Cloud; Password=CloudS20!");
+
+        connect.Open();
+        OleDbCommand comm = new OleDbCommand("select * from InsurancePlans", connect);
+        OleDbDataReader reader = comm.ExecuteReader();
+
+        int count = 0;
+        while (reader.Read())
+        {
+            // reader contains a row: 0 is ID, 1 is PlanTitle, 2 is Company, 3 is Category, 
+            //      4 is Monthly Premium,    5 is deductible, 6 is Out of Pocket Max
+            plan_nums[count].Text = reader[0].ToString();
+            plan_titles[count].Text = reader[1].ToString();
+            plan_companies[count].Text = reader[2].ToString();
+            plan_categories[count].Text = reader[3].ToString();
+            plan_premiums[count].Text = "$" + reader[4].ToString();
+            plan_deductibles[count].Text = "$" + reader[5].ToString();
+            plan_out_of_pocket_maxs[count].Text = "$" + reader[6].ToString();
+
+            if (count == 3) break;
+            ++count;
+        }
+        connect.Close();
+    }
+}

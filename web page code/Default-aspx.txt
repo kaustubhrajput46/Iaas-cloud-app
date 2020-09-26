@@ -1,0 +1,194 @@
+<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+
+    <p>
+        &nbsp;</p>
+<p>
+        Welcome!</p>
+    <p>
+        Health Plans for a 21-year-old non-smoking female living in Athens:</p>
+    <p>
+        &nbsp;</p>
+    <p>
+        <asp:Table ID="Table1" runat="server" Height="140px" Width="756px">
+
+            <asp:TableRow>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell>
+
+                    <asp:Button ID="Button1" runat="server" Text="Select" />
+
+                </asp:TableCell>
+
+            </asp:TableRow>
+
+            <asp:TableRow>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label9" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label10" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label11" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label12" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label13" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label14" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell>
+
+                    <asp:Button ID="Button2" runat="server" Text="Select" />
+
+                </asp:TableCell>
+
+            </asp:TableRow>
+
+            <asp:TableRow>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label15" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label16" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label17" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label18" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label19" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label20" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label21" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell>
+
+                    <asp:Button ID="Button3" runat="server" Text="Select" />
+
+                </asp:TableCell>
+
+            </asp:TableRow>
+
+            <asp:TableRow>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label22" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label23" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label24" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label25" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label26" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label27" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell BorderColor="White" BorderWidth="5px">
+
+                    <asp:Label ID="Label28" runat="server" Text="Label"></asp:Label>
+
+                </asp:TableCell>
+                <asp:TableCell>
+
+                    <asp:Button ID="Button4" runat="server" Text="Select" />
+
+                </asp:TableCell>
+
+            </asp:TableRow>
+
+        </asp:Table>
+    </p>
+</asp:Content>
